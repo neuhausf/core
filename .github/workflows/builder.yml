@@ -139,7 +139,6 @@ jobs:
             --${{ matrix.arch }} \
             --target /data \
             --generic ${{ needs.init.outputs.version }}
-            --docker-hub "neuhausf/home-assistant"
 
   build_machine:
     name: Build ${{ matrix.machine }} machine core image
