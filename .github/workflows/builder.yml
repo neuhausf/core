@@ -302,13 +302,13 @@ jobs:
 
           function validate_image() {
             local image=${1}
-            if ! cas authenticate --signerID notary@home-assistant.io "docker://${image}"; then
+            if ! cas authenticate --signerID flori@besonet.ch "docker://${image}"; then
               echo "Invalid signature!"
               exit 1
             fi
           }
 
-          for docker_reg in "homeassistant" "ghcr.io/home-assistant"; do
+          for docker_reg in "neuhausf" "ghcr.io/neuhausf"; do
             docker pull "${docker_reg}/amd64-homeassistant:${{ needs.init.outputs.version }}"
             docker pull "${docker_reg}/i386-homeassistant:${{ needs.init.outputs.version }}"
             docker pull "${docker_reg}/armhf-homeassistant:${{ needs.init.outputs.version }}"
