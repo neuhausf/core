@@ -57,6 +57,7 @@ jobs:
         with:
           source: file://${{ github.workspace }}/OFFICIAL_IMAGE
           token: ${{ secrets.CAS_TOKEN }}
+          signer: ${{ secrets.CAS_SIGN_ID }}
 
   build_python:
     name: Build PyPi package
