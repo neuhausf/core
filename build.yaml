@@ -1,5 +1,5 @@
-image: homeassistant/{arch}-homeassistant
-shadow_repository: ghcr.io/home-assistant
+image: neuhausf/{arch}-homeassistant
+shadow_repository: ghcr.io/neuhausf
 build_from:
   aarch64: ghcr.io/home-assistant/aarch64-homeassistant-base:2021.09.0
   armhf: ghcr.io/home-assistant/armhf-homeassistant-base:2021.09.0
@@ -7,7 +7,7 @@ build_from:
   amd64: ghcr.io/home-assistant/amd64-homeassistant-base:2021.09.0
   i386: ghcr.io/home-assistant/i386-homeassistant-base:2021.09.0
 codenotary:
-  signer: notary@home-assistant.io
+  signer: flori@besonet.ch
   base_image: notary@home-assistant.io
 labels:
   io.hass.type: core
